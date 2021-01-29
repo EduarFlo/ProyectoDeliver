@@ -1,38 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DeliVery</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/STYLES/index.css" />
+    <link rel="shortcut icon" href="/IMG/logo.png" />
+    <title>DELY-VERY</title>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/IMG/logo.png" alt="logo" />
+          DelyVery
+        </a>
 
-    <header class="header inicio">
-      <div class="contenedor contenido-header">
-        <div class="barra">
-          <a href="/">
-            <img src="build/img/logo.svg" alt="Logotipo de Bienes Raices" />
-          </a>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#main">Servicios</a>
+              <ul id="lista">
+                <li><a href="">Submenu 1</a></li>
+                <li><a href="">Submenu 1</a></li>
+                <li><a href="">Submenu 1</a></li>
+                <li><a href="">Submenu 1</a></li>
+                <li><a href="">Submenu 1</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#speakers">Participantes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#place-time">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#conviertete-en-orador">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-register" href="#">
+                Registrarse
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- /Header -->
 
-          <div class="mobile-menu">
-            <img src="build/img/barras.svg" alt="icono menu responsive" />
+    <!-- Main -->
+    <main id="main">
+      <div
+        id="carousel"
+        class="carousel slide carousel-fade"
+        data-ride="carousel"
+        data-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="/IMG/chetumal1.jpg"
+              alt="chetumal1"
+            />
           </div>
-
-          <div class="derecha">
-            <nav class="navegacion">
-              <a href="servicios.html">Servicios</a>
-              <a href="nosotros.html">Nosotros</a>
-              <a href="participantes.html">Participantes</a>
-              <a href="contacto.html">Contacto</a>
-              <a href="registro.html">Sign In</a>
-            </nav>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/IMG/chetumal2.jpg"
+              alt="chetumal2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="/IMG/chetumal3.jpg"
+              alt="chetumal3"
+            />
+          </div>
+          <div class="overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6 offset-md-0 text-center text-md-left">
+                  <h1>Lo mejor de Chetumal en un click!</h1>
+                  <p class="d-none d-md-block">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Excepturi distinctio, dolorem magni vitae debitis qui
+                    blanditiis
+                  </p>
+                  <a href="#" class="btn btn-outline-light" data-toggle="modal"
+                    >Quiero ser Deliver!</a
+                  >
+                  <button
+                    type="button"
+                    class="btn btn-register"
+                    data-toggle="modal"
+                    data-target="#myModal"
+                  >
+                    Descubrir
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-   
-        <h1>Lo mejor de chetumal en  un click!</h1>
       </div>
-    </header>
+    </main>
+    <!-- /Main -->
 
+    <!-- Servicios -->
+    <section id="servicios" class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <h5>Conoce nuestros</h5>
+            <h2>SERVICIOS</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/delivery-guy.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-info">Changarritos</span>
+                  <span class="badge badge-info">Comida Rapida</span>
+                </div>
+                <h5 class="card-title">Restaurantes</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/hand.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-info">CFE</span>
+                  <span class="badge badge-info">CAPA</span>
+                </div>
+                <h5 class="card-title">Pago de Servicios</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/delivery-man.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-secondary">Compras</span>
+                  <span class="badge badge-danger">Seguras</span>
+                </div>
+                <h5 class="card-title">Envios</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/grocery-cart.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-secondary">Chedraui</span>
+                  <span class="badge badge-danger">Super Willis</span>
+                </div>
+                <h5 class="card-title">Abarrotes</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/harvest.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-warning">Mercado</span>
+                  <span class="badge badge-info">Central de Abastos</span>
+                </div>
+                <h5 class="card-title">Frutas y Verduras</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                class="card-img-top mx-auto"
+                src="/IMG/pharmacy.svg"
+                alt="cards"
+              />
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge badge-warning">YZA</span>
+                  <span class="badge badge-info">Similares</span>
+                </div>
+                <h5 class="card-title">Farmacia</h5>
+                <p class="card-text">
+                  Vivamus quam mi, egestas eu metus id, mollis suscipit ipsum.
+                  In vel mollis mauris. Nunc id sem a lacus tincidunt pretium in
+                  in urna. Nam mi nisi, tincidunt ac tincidunt id, fermentum at
+                  metus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Speakers -->
+
+    <!-- Lugar y fecha -->
+    <section id="place-time">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-6 pl-0 pr-0">
+            <img src="/IMG/deliver.jpg" alt="moto" />
+          </div>
+
+          <div class="col-12 col-lg-6 pt-4 pb-4">
+            <h2>Lo que quieras, cuando quieras!</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque laudantium necessitatibus velit iste deleniti aliquam
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /Lugar y fecha -->
+
+    <!-- Footer -->
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Contáctanos</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Prensa</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Conferencias</a>
+          </div>
+          <div class="col-12 col-lg">
+            <img class="insta" src="/IMG/instagram-2016.svg" alt="instagram" />
+          </div>
+          <div class="col-12 col-lg">
+            <img class="watsap" src="/IMG/whatsapp-symbol.svg" alt="watsap" />
+          </div>
+          <div class="col-12 col-lg">
+            <img class="redes" src="/IMG/facebook-2.svg" alt="facebook" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+    <!--Modal Mapa-->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body mb-0 p-0">
+            <!--Google map-->
+            <div
+              id="map-container-google-18"
+              class="z-depth-1-half map-container-11"
+              style="height: 400px"
+            >
+              <iframe
+                src="https://maps.google.com/maps?q=tecnm%20campus%20chetumal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary btn-md">
+              Save location <i class="fas fa-map-marker-alt ml-1"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-md"
+              data-dismiss="modal"
+            >
+              Close <i class="fas fa-times ml-1"></i>
+            </button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWkdd2ybYqRT7pf5-_P88AEQjWVV7k0bw"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="/SCRIPTS/index.js"></script>
   </body>
 </html>
