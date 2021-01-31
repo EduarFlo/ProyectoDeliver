@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+body {
+    font-family: 'Lato',sans-serif;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+ul, li {
+    list-style: none;
+}
+
+nav.navbar {
+    background-color: #FFD275;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: 500px;
+    font-size: 34px;
+}
+
+.navbar-nav > li {
+    float: none;
+}
+
+.navbar-nav li a {
+    background-color:#FFD275;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 12px;
+    display:block;
+}
+
+.navbar-nav li a:hover {
+    background-color: #FE5F55;
+}
+
+.navbar-nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.navbar-nav li:hover>ul {
+    display: block;
+}
+
+.navbar-nav li ul li {
+    position: relative;
+}
+
+.navbar-nav li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+.btn {
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #272831;
+    color: white;
+    border-style: none;
+}
+
+.btn-register:hover {
+    background-color: #FE5F55;
+}
+
+#header img {
+    width: 80px;
+}
+
+#main .carousel-inner img {
+    max-height: 70vh;
+    object-fit: cover;
+    filter: grayscale(70%);
+}
+
+#carousel {
+    position: relative;
+}
+
+#carousel .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f0a40d23;
+    color: white;
+}
+
+#carousel .overlay .container,
+#carousel .overlay .row {
+    height: 100%;
+}
+
+.map-container-9,
+.map-container-10,
+.map-container-11 {
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-9 iframe,
+.map-container-10 iframe,
+.map-container-11 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+.card-img-top{
+    height: 300px;
+    width: 300px;
+}
+
+#place-time {
+    background-color: #FFD275;
+    color: black;
+}
+
+#place-time img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+#footer {
+    background-color: #F4EEEB;
+}
+
+#footer a {
+    font-size: 12px;
+    color: black;
+}
+
+.insta, .watsap{
+    position: relative;
+    margin: auto;
+    width: 30px;
+}
+
+.redes {
+    position: relative;
+    margin: auto;
+    width: 15px;
+
+}
