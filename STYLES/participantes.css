@@ -1,0 +1,32 @@
+.botones{    
+    width: 90%;
+    margin: 1%;
+    background-color: #FFD275;
+    color: black;
+    
+}
+#e{
+    margin-top: 10%
+}
+
+body{
+    background-image: url(/IMG/body.png);
+    /*background-image: linear-gradient(to bottom right, rgba(255, 210, 117, 0.70), rgba(247, 10, 10, 0.65));*/
+}
+
+#signin{
+    background-color: #FFD275;
+    color: black;
+}
+
+#cancela{
+    background-color: #f44336;
+}
+
+.modales{
+    width: 50%; 
+    margin: 1%;
+}
+#iniciar{
+    text-align: center;
+}
