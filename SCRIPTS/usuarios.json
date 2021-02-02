@@ -1,0 +1,22 @@
+{
+    "users" :[
+        {
+            "email" : "1",
+            "password" : "2",
+            "username" : "3",
+            "address" : "4"            
+        },
+        {
+            "email" : "",
+            "password" : "",
+            "username" : "",
+            "address" : ""            
+        },
+        {
+            "email" : "",
+            "password" : "",
+            "username" : "",
+            "address" : ""            
+        }
+    ]
+}
