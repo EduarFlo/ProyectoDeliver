@@ -3,39 +3,27 @@ window.onload = function () {
     let baseDeDatos = [
         {
             id: 1,
-            nombre: 'Cafe en grano',
-            precio: 89.99,
-            imagen: "/IMG/Catalogo/grano.jpg"
+            nombre: 'Patata',
+            precio: 1,
+            imagen: 'https://source.unsplash.com/random/500x500/?potato&sig=1'
         },
         {
             id: 2,
-            nombre: 'Café',
-            precio: 39.99,
-            imagen: "/IMG/Catalogo/cafe.jpg"
+            nombre: 'Cebolla',
+            precio: 1.2,
+            imagen: 'https://source.unsplash.com/random/500x500/?onion&sig=2'
         },
         {
             id: 3,
-            nombre: 'Frappe',
-            precio: 59.99,
-            imagen: "/IMG/Catalogo/frappe.jpg"
+            nombre: 'Calabacin',
+            precio: 2.1,
+            imagen: 'https://source.unsplash.com/random/500x500/?zucchini&sig=3'
         },
         {
             id: 4,
-            nombre: 'Frappuchino',
-            precio: 69.99,
-            imagen: "/IMG/Catalogo/frappuchino.jpg"
-        },
-        {
-            id: 5,
-            nombre: 'Pan',
-            precio: 29.99,
-            imagen: "/IMG/Catalogo/pan.jpg"
-        },
-        {
-            id: 6,
-            nombre: 'Té',
-            precio: 34.99,
-            imagen: "/IMG/Catalogo/tejpg.jpg"
+            nombre: 'Fresas',
+            precio: 0.6,
+            imagen: 'https://source.unsplash.com/random/500x500/?burrs&sig=4'
         }
 
     ];
@@ -67,7 +55,7 @@ window.onload = function () {
             // Precio
             let miNodoPrecio = document.createElement('p');
             miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent =  '$'+ info['precio'];
+            miNodoPrecio.textContent = info['precio'] + '€';
             // Boton 
             let miNodoBoton = document.createElement('button');
             miNodoBoton.classList.add('btn', 'btn-primary');
@@ -111,7 +99,7 @@ window.onload = function () {
             // Creamos el nodo del item del carrito
             let miNodo = document.createElement('li');
             miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - $${miItem[0]['precio']}`;
+            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - ${miItem[0]['precio']}€`;
             // Boton de borrar
             let miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
