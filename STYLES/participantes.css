@@ -1,3 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFD275;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+nav.navbar {
+    background-color: #FFD275;
+}
+
+.navbar-brand {
+    color: white;
+    font-weight: 500px;
+    font-size: 34px;
+}
+
+.navbar-nav>li {
+    float: none;
+}
+
+.navbar-nav li a {
+    background-color: #FFD275;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: block;
+}
+
+.navbar-nav li a:hover {
+    background-color: #FE5F55;
+}
+
+.navbar-nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.navbar-nav li:hover>ul {
+    display: block;
+}
+
+.navbar-nav li ul li {
+    position: relative;
+}
+
+.navbar-nav li ul li ul {
+    right: -140px;
+    top: 0px;
+}
+
+.btn {
+    margin-top: 5px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: #272831;
+    color: white;
+    border-style: none;
+}
+
+.btn-register:hover {
+    background-color: #FE5F55;
+}
+
+#header img{
+    width: 80px;
+}
+
+
 .botones{    
     width: 90%;
     margin: 1%;
@@ -9,10 +94,6 @@
     margin-top: 10%
 }
 
-body{
-    background-image: url(/IMG/body.png);
-    /*background-image: linear-gradient(to bottom right, rgba(255, 210, 117, 0.70), rgba(247, 10, 10, 0.65));*/
-}
 
 #signin{
     background-color: #FFD275;
