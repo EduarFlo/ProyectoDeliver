@@ -1,5 +1,22 @@
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+})
+
+const fetchData = async () => {
+    try {
+        const res = await fetch('catalogo.json')
+        const data = await res.json()
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 window.onload = function () {
     // Variables
+    
     let baseDeDatos = [
         {
             id: 1,

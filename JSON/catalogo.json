@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cafe en grano",
+        "precio": 89.99,
+        "imagen": "/IMG/Catalogo/grano.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "Café",
+        "precio": 39.99,
+        "imagen": "/IMG/Catalogo/cafe.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "Frappe",
+        "precio": 59.99,
+        "imagen": "/IMG/Catalogo/frappe.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "Frappuchino",
+        "precio": 69.99,
+        "imagen": "/IMG/Catalogo/frappuchino.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "Pan",
+        "precio": 29.99,
+        "imagen": "/IMG/Catalogo/pan.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Té",
+        "precio": 34.99,
+        "imagen": "/IMG/Catalogo/tejpg.jpg"
+    }
+
+]
