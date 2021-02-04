@@ -138,8 +138,6 @@ position:absolute;
   height: auto;
 }
 
-
-
 #footer {
   background-color: #F4EEEB;
 }
@@ -160,4 +158,58 @@ position:absolute;
   margin: auto;
   width: 15px;
 
+}
+
+/*Estilos registro*/
+#pRegistro{
+  font-size: 64px;
+}
+
+#left {
+  background-color: #FFD275;
+  color: black;
+  text-align: center;
+}
+
+#right {
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.botones {
+  background-color: #FFD275;
+  color: black;
+  width: 90%
+}
+
+.inputs {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#entrar {
+  color: #FFD275;
+}
+
+.modales {
+  width: 50%;
+  margin: 1%;
+}
+
+#signin {
+  background-color: #FFD275;
+  color: black;
+}
+
+#cancela {
+  background-color: #f44336;
+}
+
+#tlsdC {
+  margin: 5%;
+}
+
+button:hover {
+  opacity: 0.8;
 }
