@@ -1,37 +1,58 @@
 [
     {
         "id": 1,
-        "nombre": "Cafe en grano",
+        "nombre": "Café en grano",
+        "contenido": "Deseas disfrutar del café de",
+        "marca": "starbucks",
+        "contenido2": "desde la comodidad de tu casa.",
+        "contenido3": "Desde presentaciones de 500gr hasta 1.5 Kg y de diversas texturas.",
         "precio": 89.99,
         "imagen": "/IMG/Catalogo/grano.jpg"
     },
     {
         "id": 2,
         "nombre": "Café",
+        "contenido": "Quieres lo clasico que te levante de una mala racha, pues el Cafe Selecto de",
+        "marca": "starbucks",
+        "contenido2": "es para tí.",
+        "contenido3": "Con sus presentaciones de distintos tamaños para la energia que necesites.",
         "precio": 39.99,
         "imagen": "/IMG/Catalogo/cafe.jpg"
     },
     {
         "id": 3,
         "nombre": "Frappe",
+        "contenido": "Antojo de un postre pero no tan dulce,",
+        "marca": "starbucks",
+        "contenido2": "siempre tiene la solucion.",
+        "contenido3": "Diferentes presentaciones para distintos antojos, no olvides pedirlos con crema y cholocate extra.",
         "precio": 59.99,
         "imagen": "/IMG/Catalogo/frappe.jpg"
     },
     {
         "id": 4,
         "nombre": "Frappuchino",
+        "contenido": "Tienes prisa pero no queires perder tiempo ordenando",
+        "marca": "starbucks",
+        "contenido2": "tiene la alternativa indicada apra tí.",        
         "precio": 69.99,
         "imagen": "/IMG/Catalogo/frappuchino.jpg"
     },
     {
         "id": 5,
         "nombre": "Pan",
+        "contenido": "Desdeas un aperitivo que acompañe el cafe",
+        "marca": "starbucks",
+        "contenido2": "viene ah solucionar esto con su variedad de panes.",        
         "precio": 29.99,
         "imagen": "/IMG/Catalogo/pan.jpg"
     },
     {
         "id": 6,
         "nombre": "Té",
+        "contenido": "Te cansaste del cafe pero aun sabes que en",
+        "marca": "starbucks",
+        "contenido2": "consigues calidad en las bebidad, pues tenemos otras alternativas.",
         "precio": 34.99,
         "imagen": "/IMG/Catalogo/tejpg.jpg"
     }
