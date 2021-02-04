@@ -1,22 +1,16 @@
 {
     "users" :[
         {
-            "email" : "1",
-            "password" : "2",
-            "username" : "3",
-            "address" : "4"            
+            "email" : "qwerty@gmail.com",
+            "password" : "122333ASD",
+            "username" : "asdfZXC",
+            "address" : "Insurgentes"            
         },
         {
-            "email" : "",
-            "password" : "",
-            "username" : "",
-            "address" : ""            
-        },
-        {
-            "email" : "",
-            "password" : "",
-            "username" : "",
-            "address" : ""            
+            "email" : "poiu@yahoo.com",
+            "password" : "kajs1092",
+            "username" : "jcbodoque",
+            "address" : "31 Minutos"            
         }
     ]
 }

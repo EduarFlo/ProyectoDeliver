@@ -82,8 +82,7 @@
                 </div>
                 <br>
                 <hr>
-                <form action="">
-
+                <form action="" onsubmit="return validacionRegistro()">
 
                     <br>
                     <div class="input-group mb-3 inputs">
@@ -92,7 +91,7 @@
                                 <i class="fas fa-at"></i>
                             </span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Email" autofocus required>
+                        <input type="email" id="reg-email" class="form-control" placeholder="Email" autofocus required>
                     </div>
 
                     <div class="input-group mb-3 inputs">
@@ -101,7 +100,12 @@
                                 <i class="fas fa-unlock"></i>
                             </span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" required>
+                        <input type="password" id="reg-pass" class="form-control" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden >
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        La contraseña debe ser mínimo de 8 caracteres incluyendo letras y números
                     </div>
 
                     <div class="input-group mb-3 inputs">
@@ -110,7 +114,7 @@
                                 <i class="fas fa-id-badge"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nombre de usuario" required>
+                        <input type="text" id="reg-username"  class="form-control" placeholder="Nombre de usuario" required>
                     </div>
 
                     <div class="input-group mb-3 inputs">
@@ -119,7 +123,7 @@
                                 <i class="fas fa-home"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Dirección" required>
+                        <input type="text" id="reg-address" class="form-control" placeholder="Dirección" required>
                     </div>
 
                     <button class="btn botones">Registrarse</button>
