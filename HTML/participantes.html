@@ -19,34 +19,34 @@
 
     <!-- Header -->
     <nav id="header" class="navbar navbar-expand-lg ">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img id="logo" src="/IMG/logo.png" alt="logo" />
-          DelyVery
-        </a>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="/IMG/logo.png" alt="logo" />
+                DelyVery
+            </a>
 
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="catalogo.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="participantes.html">Participantes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <button onclick="location.href='registro.html'" type="button" class="btn btn-register" >
-                Registrarse
-              </button>
-            </li>
-          </ul>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="participantes.html">Participantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <button onclick="location.href='registro.html'" type="button" class="btn btn-register">
+                            Registrarse
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
     <!-- /Header -->
 
@@ -55,7 +55,7 @@
             <p class="h3 font-weight-bold">REGISTRO DE NEGOCIO</p>
             <br>
             <div>
-                <form action="">
+                <form action="index.html" onsubmit="return validacionRegistro()">
                     <label for="logo">Logo. Formatos admitidos: PNG, JPG, SVG</label>
                     <div class="input-group mb-3 inputs">
                         <div class="input-group-prepend">
@@ -63,7 +63,7 @@
                                 <i class="fas fa-file-image"></i>
                             </span>
                         </div>
-                        <input type="file" class="form-control form-control-file" name="logo"
+                        <input type="file" id="reg-logo" class="form-control form-control-file" name="logo"
                             accept=".png, .jpg, .jpeg, .svg" required>
                     </div>
 
@@ -73,7 +73,8 @@
                                 <i class="fas fa-hotel"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Nombre del negocio" required autofocus>
+                        <input type="text" id="reg-brand" class="form-control" placeholder="Nombre del negocio" required
+                            autofocus>
                     </div>
 
                     <div class="input-group mb-3 inputs">
@@ -82,18 +83,18 @@
                                 <i class="fas fa-map-marked-alt"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Dirección" required>
+                        <input type="text" id="reg-address" class="form-control" placeholder="Dirección" required>
                     </div>
 
                     <div class="form-group">
                         <label for="giro">Giro comercial:</label>
-                        <select class="form-control" id="giro">
-                            <option value="restaurante">Restaurante</option>
-                            <option value="pagos">Pago de servicios</option>
-                            <option value="envios">Envíos</option>
-                            <option value="abarrotes">Abarrotes</option>
-                            <option value="frutas">Frutas y verduras</option>
-                            <option value="farmacia">Farmacia</option>
+                        <select class="form-control" id="reg-giro" required>
+                            <option value="Restaurante">Restaurante</option>
+                            <option value="Pagos">Pago de servicios</option>
+                            <option value="Envios">Envíos</option>
+                            <option value="Abarrotes">Abarrotes</option>
+                            <option value="Fruteria">Frutas y verduras</option>
+                            <option value="Farmacia">Farmacia</option>
                         </select>
                     </div>
 
@@ -107,7 +108,8 @@
                                         <i class="fas fa-phone"></i>
                                     </span>
                                 </div>
-                                <input type="number" class="form-control" placeholder="Núm. teléfono" required>
+                                <input type="number" id="reg-phone" class="form-control" placeholder="Núm. teléfono"
+                                    required>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -117,9 +119,15 @@
                                         <i class="fab fa-whatsapp"></i>
                                     </span>
                                 </div>
-                                <input type="number" class="form-control" placeholder="Núm. Whatsapp" required>
+                                <input type="number" id="reg-whats" class="form-control" placeholder="Núm. Whatsapp"
+                                    required>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alert-num" hidden>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        Los números deben ser de 10 dígitos
                     </div>
 
                     <label for="">Datos para inicio de sesión</label>
@@ -130,7 +138,7 @@
                                 <i class="fas fa-at"></i>
                             </span>
                         </div>
-                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input type="email" id="reg-email" class="form-control" placeholder="Email" required>
                     </div>
 
                     <div class="input-group mb-3 inputs">
@@ -139,8 +147,14 @@
                                 <i class="fas fa-unlock"></i>
                             </span>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña" required>
+                        <input type="password" id="reg-pass" class="form-control" placeholder="Contraseña" required>
                     </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        La contraseña debe ser mínimo de 8 caracteres incluyendo letras y números
+                    </div>
+
 
                     <div class="row">
                         <div class="col-sm-6">
@@ -169,41 +183,53 @@
         <div class="modal-dialog">
             <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h3 class="modal-title">Inicio de sesión</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+                <form action="index.html" onsubmit="return inicioSesion()">
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="input-group mb-3 inputs">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-at"></i>
-                            </span>
-                        </div>
-                        <input type="email" class="form-control" placeholder="Email" autofocus>
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Inicio de sesión</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
-                    <div class="input-group mb-3 inputs">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text ">
-                                <i class="fas fa-unlock"></i>
-                            </span>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at"></i>
+                                </span>
+                            </div>
+                            <input type="email" id="login-email" class="form-control" placeholder="Email" required
+                                autofocus>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña">
+
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ">
+                                    <i class="fas fa-unlock"></i>
+                                </span>
+                            </div>
+                            <input type="password" id="login-pass" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible fade show" id="alert-log" hidden>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Datos de inicio de sesión incorrectos
+                        </div>
+
                     </div>
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
 
-                    <button type="submit" id="signin" class="btn modales">Entrar</button>
+                        <button type="submit" id="signin" class="btn modales">Entrar</button>
 
-                    <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
 
-                </div>
+                    </div>
+
+                </form>
 
             </div>
         </div>

@@ -23,41 +23,54 @@
         <div class="modal-dialog">
             <div class="modal-content">
 
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h3 class="modal-title">Inicio de sesión</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
+                <form action="index.html" onsubmit="return inicioSesion()">
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="input-group mb-3 inputs">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">
-                                <i class="fas fa-at"></i>
-                            </span>
-                        </div>
-                        <input type="email" class="form-control" placeholder="Email" autofocus>
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Inicio de sesión</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
 
-                    <div class="input-group mb-3 inputs">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text ">
-                                <i class="fas fa-unlock"></i>
-                            </span>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at"></i>
+                                </span>
+                            </div>
+                            <input type="email" id="login-email" class="form-control" placeholder="Email" autofocus
+                                required>
                         </div>
-                        <input type="password" class="form-control" placeholder="Contraseña">
+
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ">
+                                    <i class="fas fa-unlock"></i>
+                                </span>
+                            </div>
+                            <input type="password" id="login-pass" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible fade show" id="alert-log" hidden>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Datos de inicio de sesión incorrectos
+                        </div>
+
                     </div>
-                </div>
 
-                <!-- Modal footer -->
-                <div class="modal-footer">
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
 
-                    <button type="submit" id="signin" class="btn modales">Entrar</button>
+                        <button type="submit" id="signin" class="btn modales">Entrar</button>
 
-                    <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
+                        <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
 
-                </div>
+                    </div>
+
+                </form>
 
             </div>
         </div>
@@ -82,7 +95,7 @@
                 </div>
                 <br>
                 <hr>
-                <form action="" onsubmit="return validacionRegistro()">
+                <form action="index.html" onsubmit="return validacionRegistro()">
 
                     <br>
                     <div class="input-group mb-3 inputs">
@@ -103,7 +116,7 @@
                         <input type="password" id="reg-pass" class="form-control" placeholder="Contraseña" required>
                     </div>
 
-                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden >
+                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden>
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
                         La contraseña debe ser mínimo de 8 caracteres incluyendo letras y números
                     </div>
@@ -114,7 +127,8 @@
                                 <i class="fas fa-id-badge"></i>
                             </span>
                         </div>
-                        <input type="text" id="reg-username"  class="form-control" placeholder="Nombre de usuario" required>
+                        <input type="text" id="reg-username" class="form-control" placeholder="Nombre de usuario"
+                            required>
                     </div>
 
                     <div class="input-group mb-3 inputs">
