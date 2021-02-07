@@ -22,7 +22,7 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
     crossorigin="anonymous">
 -->
-<link rel="stylesheet" href="/STYLES/index.css" />
+<link rel="stylesheet" href="/STYLES/catalogo.css" />
 <link rel="shortcut icon" href="/IMG/logo.png" />
 <title>DELY-VERY</title>
 </head>
@@ -231,7 +231,9 @@
 </section>
 <!-- /Servicios -->
 
-
+<!--
+    EDITAR UN JSON DESDE JS
+-->
 
 <!-- Carrito2 --> 
 <div class="container-fluid">
@@ -265,6 +267,38 @@
     </div>     
 </div>  
 
+<template id="template-footer">
+            
+                <th >
+                    <p>
+                        Si su pago es efectivo, <br>
+                        ingrese la cantidad ->
+                    </p>
+                </th>
+
+                <td >
+                    <form action="/HTML/carrito.html" onsubmit="return validacionVacio()" method="get">
+                        <input type="text" id="Numero" required placeholder="###,###.###">
+                        <p id="demo" style="color: darkred;"></p>
+                        <p id="demo2"></p>
+                        <button type="submit" class="btn  ">Pagar con efectivo</button>
+                        <button type="button" class="btn  "  onclick="location.href='/HTML/carrito.html'" >Pagar con Tarjeta</button>
+                    </form> 
+                </td>  
+                
+                <td id="tdFooterCantidad" class=" font-weight-bold ">10</td>
+
+                <td>
+                    <button id="btnvaciar-carrito" class=" btn btn-danger btn-sm " >
+                        vaciar todo
+                    </button>
+                </td>
+
+                <td class=" font-weight-bold " scope="col"> $ 
+                    <span id="spanFooterPrecio"> $ 5000</span>
+                </td>         
+</template>
+
 <template id="template-card">
         <div class="col-12 mb-2 col-md-4">
             <div class="card">
@@ -272,11 +306,13 @@
                     class="card-img-top mx-auto">
                 <div class="card-body">
                     <h5 id="h5Titulo" class="card-title">Titulo</h5>
-                    <p  class="card-text">
-                        <q id="qContenido"> Contenido </q>
-                        <q id="qMarca" style="color: darkolivegreen;"> Marca </q>
-                        <q id="qContenido2"> Contenido2 </q> <br> 
-                        <q id="qContenido3"> Contenido3 </q>
+                    <p  class="card-text ">
+                        <blockquote>
+                            <q id="qContenido"> Contenido </q>
+                            <q id="qMarca" style="color: darkolivegreen;"> Marca </q>
+                            <q id="qContenido2"> Contenido2 </q> <br> 
+                            <q id="qContenido3"> Contenido3 </q>
+                        </blockquote>
 <!--
                         <h6 id="h6Contenido"> Contenido </h6>
                         <h6 id="h6Marca" style="color: darkolivegreen;"> Marca </h6> <br>
@@ -306,17 +342,6 @@
         </td>
         <td>$ <span id="sPrecio">500</span></td>
     </tr>
-</template>
-
-<template id="template-footer">
-    <th scope="row" colspan="2">Total productos</th>
-    <td id="tdFooterCantidad">10</td>
-    <td>
-        <button id="btnvaciar-carrito" class="btn btn-danger btn-sm" >
-            vaciar todo
-        </button>
-    </td>
-    <td  class="font-weight-bold">$ <span id="spanFooterPrecio">5000</span></td>
 </template>
 <!-- /Carrito2 -->
 

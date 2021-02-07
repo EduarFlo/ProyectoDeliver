@@ -2,9 +2,12 @@ const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footerCarrito = document.getElementById('footerCarrito')
 
+
+
 const templateCards = document.getElementById('template-card').content
 const templatefooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
+//const templateEfectivo = document.getElementById('template-Efectivo').content
 
 const fragment = document.createDocumentFragment()
 let carrito = {}
@@ -41,10 +44,25 @@ const pintarCards = data => {
         templateCards.querySelector('#h5Titulo').textContent = producto.nombre
         templateCards.querySelector('#pPrecio').textContent = producto.precio
 
-        templateCards.querySelector('#qContenido').textContent = producto.contenido
+        const cadena = producto.contenido
+        const Contenido = cadena.toString().replace(/["]+/g,'');
+        //const Contenido = JSON.stringify(cadena, replace(/[ '"]+/g, ' '))
+        templateCards.querySelector('#qContenido').textContent = Contenido
+        /*
+        const cadena1 = producto.marca
+        const Marca = cadena1.toString().replace(/[ '"]+/g, ' ');*/
         templateCards.querySelector('#qMarca').textContent = producto.marca
+/*
+        const cadena2 = producto.contenido2
+        const qContenido2 = cadena2.replace(/["]+/g, '');*/
         templateCards.querySelector('#qContenido2').textContent = producto.contenido2
+
+        /*
+        const cadena3 = producto.contenido3
+        const qContenido3 = cadena3.replace(/["]+/g, '');
+        */
         templateCards.querySelector('#qContenido3').textContent = producto.contenido3
+
 /*
         templateCards.querySelector('#h6Contenido').textContent = producto.contenido
         templateCards.querySelector('#h6Marca').textContent = producto.marca
@@ -52,7 +70,6 @@ const pintarCards = data => {
 */
         templateCards.querySelector('img').setAttribute('src', producto.imagen)
         templateCards.querySelector('.btn-dark').dataset.id = producto.id
-/*27.35 */
 
         const clone = templateCards.cloneNode(true)
         fragment.appendChild(clone)
@@ -157,6 +174,49 @@ const btnAccion = e =>{
     e.stopPropagation()
 
 }
+
+const expresNumero = new RegExp(/^\d{1,3}(?:,\d{3})*(?:\.\d{0,2})?$/)
+
+function validacionVacio() {
+    try
+    {
+        const numero = document.getElementById("Numero").value
+
+        if (numero === '' || numero === null ){
+            //alert(" campos esta vacio")
+            document.getElementById("demo").innerHTML =" El Campo esta vacio ";
+            document.getElementById("demo2").innerHTML ="";
+        }else{
+
+            if (!expresNumero.exec(numero)){
+                
+                document.getElementById("demo").innerHTML = "El numero " +  numero + " Es Invalido";
+                document.getElementById("demo2").innerHTML = "" ;
+                return false;
+            } else{
+            
+                document.getElementById("demo2").innerHTML = "El numero " +  numero + " Es valido con la expresion "  ;
+                document.getElementById("demo").innerHTML = "" ;
+
+                localStorage["numero"]= numero;
+
+                return true;
+            }
+        }
+
+    }catch(error)
+    {
+        console.error(error);
+    }
+}
+
+/*
+var dato = localStorage["numeros"];
+var p = document.getElementById("textMilesField");
+    p.innerHTML= dato;
+*/
+
+
 /*
 <!-- Carrito --> 
         <div class="container-fluid">
