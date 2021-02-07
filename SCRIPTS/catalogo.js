@@ -11,11 +11,13 @@ let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchData()
+
     if(localStorage.getItem('carrito')){
         carrito = JSON.parse(localStorage.getItem('carrito'))
         pintarCarrito()
     }
 })
+
 cards.addEventListener('click', e =>{
     addCarrito(e)
 })
@@ -40,6 +42,7 @@ const pintarCards = data => {
     data.forEach(producto => {
         templateCards.querySelector('#h5Titulo').textContent = producto.nombre
         templateCards.querySelector('#pPrecio').textContent = producto.precio
+
 
         templateCards.querySelector('#qContenido').textContent = producto.contenido
         templateCards.querySelector('#qMarca').textContent = producto.marca
@@ -225,134 +228,168 @@ window.onload = function () {
             imagen: "/IMG/Catalogo/tejpg.jpg"
         }
 
-    ];
+
+        const cadena = producto.contenido
+        const Contenido = cadena.toString().replace(/["]+/g,'');
+        //const Contenido = JSON.stringify(cadena, replace(/[ '"]+/g, ' '))
+        templateCards.querySelector('#qContenido').textContent = Contenido
+        templateCards.querySelector('#qMarca').textContent = producto.marca
+        templateCards.querySelector('#qContenido2').textContent = producto.contenido2
+        templateCards.querySelector('#qContenido3').textContent = producto.contenido3
+
+        templateCards.querySelector('img').setAttribute('src', producto.imagen)
+        templateCards.querySelector('.btn-dark').dataset.id = producto.id
+
+        const clone = templateCards.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    cards.appendChild(fragment)
+}
+
+const addCarrito = e =>{
+    /*console.log(e.target)
+    console.log(e.target.classList.contains('btn-dark'))
+    */
+    if (e.target.classList.contains('btn-dark')){
+        setCarrito(e.target.parentElement)
+    }
+    e.stopPropagation()
+}
+
+const setCarrito = objeto => {
+    //console.log(objeto)
+    const producto = {
+        id: objeto.querySelector('.btn-dark').dataset.id,
+        nombre: objeto.querySelector('#h5Titulo').textContent,
+        precio: objeto.querySelector('#pPrecio').textContent,
+        cantidad: 1
+    }
+
+
+    if(carrito.hasOwnProperty(producto.id)) {
+        producto.cantidad = carrito[producto.id].cantidad + 1
+    }
+
+    carrito[producto.id] = {...producto}
+    pintarCarrito()
+    //console.log(producto)
+}
+
+const pintarCarrito = () => {
+    //console.log(carrito)
+    items.innerHTML = ''
+    Object.values(carrito).forEach(producto => {
+        templateCarrito.querySelector('#thTemplateCarrito').textContent = producto.id
+        templateCarrito.querySelector('#tdNombreTemCar').textContent = producto.nombre
+        templateCarrito.querySelector('#tdPrecioTemCar').textContent = producto.cantidad
+        templateCarrito.querySelector('.btn-info').dataset.id = producto.id
+        templateCarrito.querySelector('.btn-danger').dataset.id = producto.id
+        const Precio = producto.cantidad * producto.precio
+        const totalDosDecimales = Precio.toFixed(2);
+        templateCarrito.querySelector('#sPrecio').textContent = totalDosDecimales
+        
+        const clone = templateCarrito.cloneNode(true)
+        fragment.appendChild(clone)
+    })
+    items.appendChild(fragment)
+
+    pintarFooterCarrito()
+
+    localStorage.setItem('carrito',JSON.stringify(carrito))
+
     
-    let $items = document.querySelector('#items');
-    let carrito = [];
-    let total = 0;
-    let $carrito = document.querySelector('#carrito');
-    let $total = document.querySelector('#total');
-    let $botonVaciar = document.querySelector('#boton-vaciar');
+}
 
-    // Funciones
-    function renderItems() {
-        for (let info of baseDeDatos) {
-            // Estructura
-            let miNodo = document.createElement('div');
-            miNodo.classList.add('card', 'col-sm-4');
-            // Body
-            let miNodoCardBody = document.createElement('div');
-            miNodoCardBody.classList.add('card-body');
-            // Titulo
-            let miNodoTitle = document.createElement('h5');
-            miNodoTitle.classList.add('card-title');
-            miNodoTitle.textContent = info['nombre'];
-            // Imagen
-            let miNodoImagen = document.createElement('img');
-            miNodoImagen.classList.add('img-fluid');
-            miNodoImagen.setAttribute('src', info['imagen']);
-            // Precio
-            let miNodoPrecio = document.createElement('p');
-            miNodoPrecio.classList.add('card-text');
-            miNodoPrecio.textContent =  '$'+ info['precio'];
-            // Boton 
-            let miNodoBoton = document.createElement('button');
-            miNodoBoton.classList.add('btn', 'btn-primary');
-            miNodoBoton.textContent = '+';
-            miNodoBoton.setAttribute('marcador', info['id']);
-            miNodoBoton.addEventListener('click', anyadirCarrito);
-            // Insertamos
-            miNodoCardBody.appendChild(miNodoImagen);
-            miNodoCardBody.appendChild(miNodoTitle);
-            miNodoCardBody.appendChild(miNodoPrecio);
-            miNodoCardBody.appendChild(miNodoBoton);
-            miNodo.appendChild(miNodoCardBody);
-            $items.appendChild(miNodo);
+const pintarFooterCarrito = () => {
+    footerCarrito.innerHTML = ''
+    if(Object.keys(carrito).length === 0) {
+        footerCarrito.innerHTML = `
+        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+        `
+        return 
+    }
+    const nCantidad = Object.values(carrito).reduce((acc,{cantidad}) => acc + cantidad ,0)
+    const nPrecio = Object.values(carrito).reduce((acc,{cantidad, precio}) => acc + cantidad * precio ,0)
+    const totalDosDecimales = nPrecio.toFixed(2);
+
+    templatefooter.querySelector('#tdFooterCantidad').textContent = nCantidad
+    templatefooter.querySelector('#spanFooterPrecio').textContent = totalDosDecimales
+
+    const clone = templatefooter.cloneNode(true)
+    fragment.appendChild(clone)
+    footerCarrito.appendChild(fragment)
+
+    const btnVaciar = document.getElementById('btnvaciar-carrito')
+    btnVaciar.addEventListener('click', () => {
+        carrito = {}
+        pintarCarrito()
+    })
+}
+
+const btnAccion = e =>{
+    if (e.target.classList.contains('btn-info')){
+
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad++
+        carrito[e.target.dataset.id] = {...producto}
+        pintarCarrito()
+    }
+    if (e.target.classList.contains('btn-danger')){
+
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad--
+        if (producto.cantidad === 0){
+            delete carrito[e.target.dataset.id]
         }
+        pintarCarrito()
     }
+    e.stopPropagation()
 
-    function anyadirCarrito () {
-        // Anyadimos el Nodo a nuestro carrito
-        carrito.push(this.getAttribute('marcador'))
-        // Calculo el total
-        calcularTotal();
-        // Renderizamos el carrito 
-        renderizarCarrito();
-    }
+}
 
-    function renderizarCarrito() {
-        // Vaciamos todo el html
-        $carrito.textContent = '';
-        // Quitamos los duplicados
-        let carritoSinDuplicados = [...new Set(carrito)];
-        // Generamos los Nodos a partir de carrito
-        carritoSinDuplicados.forEach(function (item, indice) {
-            // Obtenemos el item que necesitamos de la variable base de datos
-            let miItem = baseDeDatos.filter(function(itemBaseDatos) {
-                return itemBaseDatos['id'] == item;
-            });
-            // Cuenta el número de veces que se repite el producto
-            let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
-                return itemId === item ? total += 1 : total;
-            }, 0);
-            // Creamos el nodo del item del carrito
-            let miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-            miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0]['nombre']} - $${miItem[0]['precio']}`;
-            // Boton de borrar
-            let miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-            miBoton.textContent = 'X';
-            miBoton.style.marginLeft = '1rem';
-            miBoton.setAttribute('item', item);
-            miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
-            miNodo.appendChild(miBoton);
-            $carrito.appendChild(miNodo);
-        });
-    }
+const expresNumero = new RegExp(/^\d{1,3}(?:,\d{3})*(?:\.\d{0,2})?$/)
 
-    function borrarItemCarrito() {
-        // Obtenemos el producto ID que hay en el boton pulsado
-        let id = this.getAttribute('item');
-        // Borramos todos los productos
-        carrito = carrito.filter(function (carritoId) {
-            return carritoId !== id;
-        });
-        // volvemos a renderizar
-        renderizarCarrito();
-        // Calculamos de nuevo el precio
-        calcularTotal();
-    }
+function validacionVacio() {
+    try
+    {
+        const numero = document.getElementById("Numero").value
 
-    function calcularTotal() {
-        // Limpiamos precio anterior
-        total = 0;
-        // Recorremos el array del carrito
-        for (let item of carrito) {
-            // De cada elemento obtenemos su precio
-            let miItem = baseDeDatos.filter(function(itemBaseDatos) {
-                return itemBaseDatos['id'] == item;
-            });
-            total = total + miItem[0]['precio'];
+        if (numero === '' || numero === null ){
+            //alert(" campos esta vacio")
+            document.getElementById("demo").innerHTML =" El Campo esta vacio ";
+            document.getElementById("demo2").innerHTML ="";
+        }else{
+
+            if (!expresNumero.exec(numero)){
+                
+                document.getElementById("demo").innerHTML = "El numero " +  numero + " Es Invalido";
+                document.getElementById("demo2").innerHTML = "" ;
+                return false;
+            } else{
+            
+                document.getElementById("demo2").innerHTML = "El numero " +  numero + " Es valido con la expresion "  ;
+                document.getElementById("demo").innerHTML = "" ;
+
+                localStorage["numero"]= numero;
+
+                return true;
+            }
         }
-        // Formateamos el total para que solo tenga dos decimales
-        let totalDosDecimales = total.toFixed(2);
-        // Renderizamos el precio en el HTML
-        $total.textContent = totalDosDecimales;
-    }
 
-    function vaciarCarrito() {
-        // Limpiamos los productos guardados
-        carrito = [];
-        // Renderizamos los cambios
-        renderizarCarrito();
-        calcularTotal();
+    }catch(error)
+    {
+        console.error(error);
     }
+}
 
-    // Eventos
-    $botonVaciar.addEventListener('click', vaciarCarrito);
+
+/*
+var dato = localStorage["numeros"];
+var p = document.getElementById("textMilesField");
+    p.innerHTML= dato;
+*/
 
     // Inicio
     renderItems();
 }*/
+
