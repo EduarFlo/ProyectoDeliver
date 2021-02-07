@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "nombre":"Los Tres Weyes",
+    "text": "Auntenticas a la Parrila",
+    "direccion":"Maxuxac #345",
+    "link":"https://www.mcdonalds.com.mx/",
+    "img":"banner1.jpg"
+  },
+
+  {
+    "id": 2,
+    "nombre":"Los portales",
+    "text": "Desde 1997",
+    "direccion":"Colonia Centro",
+    "link":"www.cafeteria.com",
+    "img":"banner2.jpg"
+  },
+
+  {
+    "id": 3,
+    "nombre":"El Rosal",
+    "text": "Para este 14 de febrero",
+    "direccion":"Efrain Aguilar #134",
+    "link":"https://www.facebook.com/elrosalchetumal/",
+    "img":"banner3.jpg"
+  },
+
+  {
+    "id": 4,
+    "nombre":"Las Marias",
+    "text": "Guajolocombos al 2x1",
+    "direccion":"Interior del Mercado Lazaro Cardenas",
+    "link":"www.lasmarias.com",
+    "img":"banner4.png"
+  },
+
+  {
+    "id": 5,
+    "nombre":"Los Burritos",
+    "text": "Un burrito al dia, todos los dias",
+    "direccion":"CHapultepec #122",
+    "link":"https://www.recetasgratis.net/receta-de-burritos-mexicanos-de-carne-picada-55349.html",
+    "img":"banner5.jpg"
+  }
+]

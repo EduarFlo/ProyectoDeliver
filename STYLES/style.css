@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ranchers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #1E1F1E; }
+
+.primary-heading {
+  font-family: 'Montserrat', sans-serif; }
+
+.offer {
+  font-size: 0.75rem; }
+  .offer::before {
+    content: "offer";
+    padding: 0.25rem;
+    background: #FFDF00;
+    margin-right: 0.15rem;
+    border-radius: 0.25rem;
+    color: #fff; }
+
+.navbar .navbar-brand {
+  font-family: "Ranchers", cursive;
+  font-size: 1.5rem; }
+
+.navbar .nav-link {
+  transition: all 0.2s ease-in-out; }
+  .navbar .nav-link.active, .navbar .nav-link:hover {
+    color: #edf5e1 !important; }
+
+.hero .carousel .carousel-inner .carousel-item img {
+  object-fit: cover;
+  max-height: 100vh; }
+
+.features {
+  padding: 3rem 0; }
+  .features .feature {
+    width: 100%; }
+    .features .feature img {
+      height: 100px; }
+    .features .feature p {
+      text-align: justify; }
+
+.camps {
+  padding: 1rem 0; }
+  .camps .camp {
+    margin: 0 15px; }
+
+.about {
+  padding: 1rem 0; }
+  .about img {
+    width: 100%; }
+
+footer p {
+  margin: 0.5rem 0; }
+
+footer .footer-link {
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+  text-transform: uppercase; }
+
+.carousel-control-prev-icon {
+  color: black; }
+
+.slider-arrow {
+  font-size: 3rem; }
+
+@media only screen and (min-width: 993px) {
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.85rem; }
+  .camps .camp {
+    transition: all 0.2s ease-in-out; }
+    .camps .camp:hover {
+      transform: translateY(-10px);
+      box-shadow: #333 0 5px 10px; } }
+
+@media only screen and (max-width: 576px) {
+  .camp {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0; }
+    .camp:nth-last-of-type(2) {
+      margin: 1rem 0; }
+  .about .space-top {
+    margin-top: 15px; }
+  footer .row {
+    font-size: 0.65rem;
+    text-align: center; } }

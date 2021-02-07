@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/STYLES/participantes.css" />
+    <title>Negocios</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <nav id="header" class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="/IMG/ehecatl.png" alt="logo" />
+                DelyVery
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalogo.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="participantes.html">Participantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <button onclick="location.href='registro.html'" type="button" class="btn btn-register">
+                            Registrarse
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- /Header -->
+
+    <div class="container" id="e">
+        <div class="jumbotron">
+            <p class="h3 font-weight-bold">REGISTRO DE NEGOCIO</p>
+            <br>
+            <div>
+                <form action="index.html" onsubmit="return validacionRegistro()">
+                    <label for="logo">Logo. Formatos admitidos: PNG, JPG, SVG</label>
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-file-image"></i>
+                            </span>
+                        </div>
+                        <input type="file" id="reg-logo" class="form-control form-control-file" name="logo"
+                            accept=".png, .jpg, .jpeg, .svg" required>
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-hotel"></i>
+                            </span>
+                        </div>
+                        <input type="text" id="reg-brand" class="form-control" placeholder="Nombre del negocio" required
+                            autofocus>
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </span>
+                        </div>
+                        <input type="text" id="reg-address" class="form-control" placeholder="Dirección" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="giro">Giro comercial:</label>
+                        <select class="form-control" id="reg-giro" required>
+                            <option value="Restaurante">Restaurante</option>
+                            <option value="Pagos">Pago de servicios</option>
+                            <option value="Envios">Envíos</option>
+                            <option value="Abarrotes">Abarrotes</option>
+                            <option value="Fruteria">Frutas y verduras</option>
+                            <option value="Farmacia">Farmacia</option>
+                        </select>
+                    </div>
+
+                    <label for="">Datos de contacto</label>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3 inputs">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-phone"></i>
+                                    </span>
+                                </div>
+                                <input type="number" id="reg-phone" class="form-control" placeholder="Núm. teléfono"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3 inputs">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </span>
+                                </div>
+                                <input type="number" id="reg-whats" class="form-control" placeholder="Núm. Whatsapp"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alert-num" hidden>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        Los números deben ser de 10 dígitos
+                    </div>
+
+                    <label for="">Datos para inicio de sesión</label>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-at"></i>
+                            </span>
+                        </div>
+                        <input type="email" id="reg-email" class="form-control" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ">
+                                <i class="fas fa-unlock"></i>
+                            </span>
+                        </div>
+                        <input type="password" id="reg-pass" class="form-control" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        La contraseña debe ser mínimo de 8 caracteres incluyendo letras y números
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <button type="submit" class="btn btn-primary botones">Guardar datos</button>
+                        </div>
+                        <div class="col-sm-6">
+                            <button type="reset" class="btn btn-warning botones">Reset</button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                <hr>
+                <br>
+                <div id="iniciar">
+                    <p>¿Ya tienes una cuenta?</p>
+                    <i class="fas fa-arrow-alt-circle-down"></i><br>
+                    <button class="btn botones" data-toggle="modal" data-target="#myModal">Iniciar Sesión</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form action="index.html" onsubmit="return inicioSesion()">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Inicio de sesión</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at"></i>
+                                </span>
+                            </div>
+                            <input type="email" id="login-email" class="form-control" placeholder="Email" required
+                                autofocus>
+                        </div>
+
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ">
+                                    <i class="fas fa-unlock"></i>
+                                </span>
+                            </div>
+                            <input type="password" id="login-pass" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible fade show" id="alert-log" hidden>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Datos de inicio de sesión incorrectos
+                        </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+
+                        <button type="submit" id="signin" class="btn modales">Entrar</button>
+
+                        <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/SCRIPTS/participantes.js"></script>
+</body>
+
+</html>

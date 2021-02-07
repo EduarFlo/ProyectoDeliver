@@ -1,0 +1,26 @@
+{
+    "bussines": [
+                {
+                    "email": "star@bucks.com",
+                    "password": "exp3nsivecoffe",
+                    "logo": "img.png",
+                    "brand": "Starbucks",
+                    "address": "Carmen Ochoa",
+                    "type": "Coffe",
+                    "phone": "9832673370",
+                    "whatsapp": "9832673370"
+
+                }, 
+                {
+                    "email": "oxxo@mexico.com",
+                    "password": "nohaysistem4",
+                    "logo": "img-1.png",
+                    "brand": "Oxxo",
+                    "address": "Everywhere Av",
+                    "type": "Autoservice",
+                    "phone": "9838454952",
+                    "whatsapp": "9832845952"
+
+                }        
+            ]
+}

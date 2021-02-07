@@ -1,0 +1,16 @@
+{
+    "users" :[
+        {
+            "email" : "qwerty@gmail.com",
+            "password" : "122333ASD",
+            "username" : "asdfZXC",
+            "address" : "Insurgentes"            
+        },
+        {
+            "email" : "poiu@yahoo.com",
+            "password" : "kajs1092",
+            "username" : "jcbodoque",
+            "address" : "31 Minutos"            
+        }
+    ]
+}

@@ -1,11 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/STYLES/index.css" />
+    <title>Registro</title>
 </head>
+
 <body>
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <form action="index.html" onsubmit="return inicioSesion()">
+
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h3 class="modal-title">Inicio de sesión</h3>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-at"></i>
+                                </span>
+                            </div>
+                            <input type="email" id="login-email" class="form-control" placeholder="Email" autofocus
+                                required>
+                        </div>
+
+                        <div class="input-group mb-3 inputs">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ">
+                                    <i class="fas fa-unlock"></i>
+                                </span>
+                            </div>
+                            <input type="password" id="login-pass" class="form-control" placeholder="Contraseña"
+                                required>
+                        </div>
+
+                        <div class="alert alert-danger alert-dismissible fade show" id="alert-log" hidden>
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            Datos de inicio de sesión incorrectos
+                        </div>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+
+                        <button type="submit" id="signin" class="btn modales">Entrar</button>
+
+                        <button type="button" id="cancela" class="btn modales" data-dismiss="modal">Cancelar</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="jumbotron col-12 col-lg-6 pl-0 pr-0 " id="left">
+            <div>
+                <a href="index.html"><img src="/IMG/ehecatl.png"  alt="logo" /></a>
+                <p id="pRegistro">Todos los servicios de Chetumal sin salir de casa</p>
+            </div>
+        </div>
+
+        <div class="jumbotron col-12 col-lg-6 pl-0 pr-0 " id="right">
+
+            <div>
+                <div>
+                    <p class="h3 font-weight-bold ">CREAR CUENTA</p>
+                    <img src="/IMG/google.png" alt="Google" class="mx-auto d-block">
+                    <br>
+                    <button class="btn botones" id="Google">Registrarse con </button>
+                </div>
+                <br>
+                <hr>
+                <form action="index.html" onsubmit="return validacionRegistro()">
+
+                    <br>
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-at"></i>
+                            </span>
+                        </div>
+                        <input type="email" id="reg-email" class="form-control" placeholder="Email" autofocus required>
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ">
+                                <i class="fas fa-unlock"></i>
+                            </span>
+                        </div>
+                        <input type="password" id="reg-pass" class="form-control" placeholder="Contraseña" required>
+                    </div>
+
+                    <div class="alert alert-danger alert-dismissible fade show" id="alertPass" hidden>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        La contraseña debe ser mínimo de 8 caracteres incluyendo letras y números
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ">
+                                <i class="fas fa-id-badge"></i>
+                            </span>
+                        </div>
+                        <input type="text" id="reg-username" class="form-control" placeholder="Nombre de usuario"
+                            required>
+                    </div>
+
+                    <div class="input-group mb-3 inputs">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text ">
+                                <i class="fas fa-home"></i>
+                            </span>
+                        </div>
+                        <input type="text" id="reg-address" class="form-control" placeholder="Dirección" required>
+                    </div>
+
+                    <button class="btn botones">Registrarse</button>
+                </form>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <p>¿Ya tienes una cuenta?</p>
+            <i class="fas fa-arrow-alt-circle-down"></i><br>
+            <button class="btn botones" data-toggle="modal" data-target="#myModal">Iniciar Sesión</button>
+        </div>
+    </div>
+
     
+
+    <script type="text/javascript" src="/SCRIPTS/registro.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,38 @@
+[
+  {
+    "img":"restaurant.png",
+    "servicio":"Restaurantes",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"changarritos"        
+  },
+  {
+    "img":"hand.svg",
+    "servicio":"Pago de Servicios",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"CFE"        
+  },
+  {
+    "img":"delivery-guy.svg",
+    "servicio":"Envios",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"Envioseguros"        
+  },
+  {
+    "img":"grocery-cart.svg",
+    "servicio":"Abarrotes",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"Todo para el hogar"        
+  },
+  {
+    "img":"harvest.svg",
+    "servicio":"Frutas y Verduras",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"Del campo a la mesa"        
+  },
+  {
+    "img":"pharmacy.svg",
+    "servicio":"Faramacias",
+    "descripcion":"In vel mollis mauris Nunc id sem a lacus tincidunt pretium in in urna. Nam mi nisi tincidunt ac tincidunt id fermentum at metus",
+    "info":"Cuidado de la Salud"        
+  }
+]
