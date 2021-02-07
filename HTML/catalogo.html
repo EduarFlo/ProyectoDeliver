@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Catalogo de la tienda-->
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/STYLES/catalogo.css" />
+    <link rel="shortcut icon" href="/IMG/logo.png" />
+    <title>DELY-VERY</title>
 <!--Catalogo de la tienda-->
 <meta charset="utf-8" />
 <meta
@@ -28,43 +45,23 @@
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="57">
-<!-- Header -->
-<nav id="header" class="navbar navbar-expand-lg sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="/IMG/logo.png" alt="logo" />
-          DelyVery
-        </a>
-
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="catalogo.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="participantes.html">Participantes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-register" href="registro.html">
-                Registrarse
-              </button>
-            </li>
-          </ul>
+@@ -58,300 +65,362 @@
+        </ul>
         </div>
-      </div>
-    </nav>
+    </div>
     </nav>
     <!-- /Header -->
-    </div>
 </nav>
 <!-- /Header -->
 
+    <!-- Servicios -->
+    <section id="servicios" class="mt-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center text-uppercase">
+                    <h5>Catalogo de nuestros</h5>
+                    <h2>PRODUCTOS</h2>
+                </div>
 <!-- Servicios -->
 <section id="servicios" class="mt-4">
     <div class="container-fluid">
@@ -73,9 +70,29 @@
                 <h5>Catalogo de nuestros</h5>
                 <h2>PRODUCTOS</h2>
             </div>
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-12 mb-4">
+                    <div class="card">
+                        <img    
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/Starbucks.svg.png"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <!--
+                            <div class="badges">
+                                <span class="badge badge-info">Changarritos</span>
+                                <span class="badge badge-info">Comida Rapida</span>
+                            </div>
+                            -->
+                            <h3 class="card-title" style="color: darkolivegreen; text-align: center;"> <Strong>STARBUCKS</Strong> </h3>
+                            <p class="card-text" style="text-align: center;">
+                                Antojo de un Latte?
+                            </p>
         </div>
         <div class="row">
-            
+
             <div class="col-12 col-md-6 col-lg-12 mb-4">
                 <div class="card">
                     <img    
@@ -98,6 +115,24 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/grano.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-secondary"">Cafetera</span>
+                                <span class="badge badge-warning">REFILL</span>
+                            </div>
+                            <h5 class="card-title">Cafe en Grano</h5>
+                            <p class="card-text">
+                                Deseas disfrutar del café de <strong style="color: darkolivegreen;">starbucks</strong> desde la comodidad de tu casa.<br>
+                                Desde presentaciones de 500gr hasta 1.5 Kg y de diversas texturas.
+
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -120,6 +155,23 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/cafe.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-danger">HOT</span>
+                                <span class="badge badge-secondary">Americano</span>
+                            </div>
+                            <h5 class="card-title">Café</h5>
+                            <p class="card-text"> 
+                                Quieres lo clasico que te levante de una mala racha, pues el Cafe Selecto de <strong style="color: darkolivegreen;">starbucks</strong> es para tí. <br>
+                                Con sus presentaciones de distintos tamaños para la energia que necesites. <br>
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -141,6 +193,23 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/frappe.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-info">COOL</span>
+                                <span class="badge badge-secondary">Moka</span>
+                            </div>
+                            <h5 class="card-title">Frappe</h5>
+                            <p class="card-text">
+                                Antojo de un postre pero no tan dulce, <strong style="color: darkolivegreen;">starbucks</strong> siempre tiene la solucion. <br>
+                                Diferentes presentaciones para distintos antojos, no olvides pedirlos con crema y cholocate extra. <br>
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -162,6 +231,23 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/frappuchino.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-info">Cool</span>
+                                <span class="badge badge-secondary">Bottle</span>
+                            </div>
+                            <h5 class="card-title">Frappucino</h5>
+                            <p class="card-text">
+                                Tienes prisa pero no queires perder tiempo ordenando <strong style="color: darkolivegreen;">starbucks</strong> tiene la alternativa indicada apra tí. <br> <br>
+
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -183,6 +269,23 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/pan.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-danger">HOT</span>
+                                <span class="badge badge-warning">HUNGRY</span>
+                            </div>
+                            <h5 class="card-title">Pan</h5>
+                            <p class="card-text">
+                                Desdeas un aperitivo que acompañe el cafe <strong style="color: darkolivegreen;">starbucks</strong> viene ah solucionar esto con su variedad de panes. <br> <br>
+
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -204,6 +307,22 @@
                 </div>
             </div>
 
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card">
+                        <img
+                            class="card-img-top mx-auto"
+                            src="/IMG/Catalogo/tejpg.jpg"
+                            alt="cards"
+                        />
+                        <div class="card-body">
+                            <div class="badges">
+                                <span class="badge badge-danger">HOT</span>
+                                <span class="badge badge-info">COOL</span>
+                            </div>
+                            <h5 class="card-title">Té</h5>
+                            <p class="card-text">
+                                Te cansaste del cafe pero aun sabes que en <strong style="color: darkolivegreen;">starbucks</strong> consigues calidad en las bebidad, pues tenemos otras alternativas. <br>
+                            </p>
             <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="card">
                     <img
@@ -224,6 +343,8 @@
                 </div>
             </div>
         </div>
+    </section>
+    <!-- /Servicios -->
     </div>
 </section>
 <!-- /Servicios -->
@@ -284,12 +405,19 @@
             <button id="btn+" class="btn btn-info btn-sm">
                 +
             </button>
-            
+
         </td>
         <td>$ <span id="sPrecio">500</span></td>
     </tr>
 </template>
 
+    <!-- Carrito -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center text-uppercase">
+                    <h5>Precios de nuestros</h5>
+                    <h2>PRODUCTOS </h2>
 <template id="template-card">
         <div class="col-12 mb-2 col-md-4">
             <div class="card">
@@ -312,10 +440,52 @@
                     <button id="btncomprar" class="btn btn-dark">Comprar</button>
                 </div>
             </div>
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row mb-4"></main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: $<span id="total">00.0</span>;</p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </aside>
+            </div>
         </div>
+    
+    <!-- /Carrito -->
 </template>
 <!-- /Carrito2 -->
 
+    <!-- Footer -->
+    <footer id="footer" class="pb-4 pt-4">
+        <div class="container">
+            <div class="row text-center">
+            <div class="col-12 col-lg">
+                <a href="#">Preguntas frecuentes</a>
+            </div>
+            <div class="col-12 col-lg">
+                <a href="#">Contáctanos</a>
+            </div>
+            <div class="col-12 col-lg">
+                <a href="#">Prensa</a>
+            </div>
+            <div class="col-12 col-lg">
+                <a href="#">Conferencias</a>
+            </div>
+            <div class="col-12 col-lg">
+                <img class="insta" src="/IMG/instagram-2016.svg" alt="instagram" />
+            </div>
+            <div class="col-12 col-lg">
+                <img class="watsap" src="/IMG/whatsapp-symbol.svg" alt="watsap" />
+            </div>
+            <div class="col-12 col-lg">
+                <img class="redes" src="/IMG/facebook-2.svg" alt="facebook" />
+            </div>
+            </div>
 <!-- Footer -->
 <footer id="footer" class="pb-4 pt-4">
     <div class="container">
@@ -326,6 +496,8 @@
         <div class="col-12 col-lg">
             <a href="#">Contáctanos</a>
         </div>
+    </footer>
+    <!-- /Footer -->
         <div class="col-12 col-lg">
             <a href="#">Prensa</a>
         </div>
@@ -346,6 +518,17 @@
 </footer>
 <!--/Footer -->
 
+    <!--Modal Mapa-->
+    <div
+        class="modal fade"
+        id="myModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="myModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog modal-lg" role="document">
+        <!--Content-->
 <!--Modal Mapa-->
 <div
     class="modal fade"
@@ -360,6 +543,19 @@
         <div class="modal-content">
             <!--Body-->
             <div class="modal-body mb-0 p-0">
+            <!--Google map-->
+            <div
+                id="map-container-google-18"
+                class="z-depth-1-half map-container-11"
+                style="height: 400px"
+            >
+                <iframe
+                src="https://maps.google.com/maps?q=tecnm%20campus%20chetumal&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen
+                ></iframe>
+            </div>
                 <!--Google map-->
                 <div
                     id="map-container-google-18"
@@ -377,6 +573,16 @@
 
             <!--Footer-->
             <div class="modal-footer justify-content-center">
+            <button type="button" class="btn btn-secondary btn-md">
+                Save location <i class="fas fa-map-marker-alt ml-1"></i>
+            </button>
+            <button
+                type="button"
+                class="btn btn-outline-secondary btn-md"
+                data-dismiss="modal"
+            >
+                Close <i class="fas fa-times ml-1"></i>
+            </button>
                 <button type="button" class="btn btn-secondary btn-md">
                         Save location <i class="fas fa-map-marker-alt ml-1"></i>
                     </button>
@@ -389,10 +595,35 @@
                 </button>
             </div>
         </div>
+        <!--/.Content-->
+        </div>
     <!--/.Content-->
     </div>
 </div>
 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"
+    ></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script
+        type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWkdd2ybYqRT7pf5-_P88AEQjWVV7k0bw"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script
@@ -418,6 +649,7 @@
 ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+    <script src="/SCRIPTS/catalogo.js"></script>
 <script src="/SCRIPTS/catalogo.js"></script>
 </body>
-</html>
+</html> 
