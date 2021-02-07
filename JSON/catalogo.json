@@ -2,10 +2,10 @@
     {
         "id": 1,
         "nombre": "Café en grano",
-        "contenido": "Deseas disfrutar del café de",
+        "contenido": "Deseas disfrutar de un buen café de",
         "marca": "starbucks",
-        "contenido2": "desde la comodidad de tu casa.",
-        "contenido3": "Desde presentaciones de 500gr hasta 1.5 Kg y de diversas texturas.",
+        "contenido2": "desde la comodidad del sofa de tu casa.",
+        "contenido3": "Desde presentaciones de 500gr hasta 1.5 Kg y de diversas texturas , notas y sabores.",
         "precio": 89.99,
         "imagen": "/IMG/Catalogo/grano.jpg"
     },

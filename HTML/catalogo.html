@@ -9,20 +9,13 @@
 />
 
 <!-- Bootstrap CSS -->
-<link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous"
-/>
-<!--
 <link 
     rel="stylesheet" 
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" 
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" 
     crossorigin="anonymous">
--->
-<link rel="stylesheet" href="/STYLES/catalogo.css" />
+
+<link rel="stylesheet" href="/STYLES/index.css" />
 <link rel="shortcut icon" href="/IMG/logo.png" />
 <title>DELY-VERY</title>
 </head>
@@ -87,12 +80,6 @@
                         alt="cards"
                     />
                     <div class="card-body">
-                        <!--
-                        <div class="badges">
-                            <span class="badge badge-info">Changarritos</span>
-                            <span class="badge badge-info">Comida Rapida</span>
-                        </div>
-                        -->
                         <h3 class="card-title" style="color: darkolivegreen; text-align: center;"> <Strong>STARBUCKS</Strong> </h3>
                         <p class="card-text" style="text-align: center;">
                             Antojo de un Latte?
@@ -241,9 +228,12 @@
         <div class="col text-center text-uppercase">
             <h5>Precios de nuestros</h5>
             <h2>PRODUCTOS </h2>
-            <br>
-            <h1>Carrito</h1>
             <hr>
+            <br>
+            <div id="cards" class="row"></div>
+            <br>
+            <h4>Carrito</h1>
+            
             <table class="table">
                 <thead>
                     <tr>
@@ -261,8 +251,7 @@
                     </tr>
                 </tfoot>
             </table>
-            <h4>Cards</h4>
-            <div id="cards" class="row"></div>
+            
         </div>
     </div>     
 </div>  
@@ -307,17 +296,12 @@
                 <div class="card-body">
                     <h5 id="h5Titulo" class="card-title">Titulo</h5>
                     <p  class="card-text ">
-                        <blockquote>
-                            <q id="qContenido"> Contenido </q>
-                            <q id="qMarca" style="color: darkolivegreen;"> Marca </q>
-                            <q id="qContenido2"> Contenido2 </q> <br> 
-                            <q id="qContenido3"> Contenido3 </q>
-                        </blockquote>
-<!--
-                        <h6 id="h6Contenido"> Contenido </h6>
-                        <h6 id="h6Marca" style="color: darkolivegreen;"> Marca </h6> <br>
-                        <h6 id="h6Contenido2"> Contenido2 </h6>
--->                    
+                        <blockquote id="blockquoteCard">
+                            <q id="qContenido" class="quote"> Contenido </q>
+                            <q id="qMarca" class="quote" style="color: darkolivegreen;"> Marca </q>
+                            <q id="qContenido2" class="quote"> Contenido2 </q> <br> 
+                            <q id="qContenido3"class="quote"> Contenido3 </q>
+                        </blockquote>                  
                     </p>
                     <p id="pPrecio">precio</p>
                     <button id="btncomprar" class="btn btn-dark">Comprar</button>

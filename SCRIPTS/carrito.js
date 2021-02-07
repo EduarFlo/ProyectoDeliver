@@ -1,3 +1,30 @@
+/*<!-- Carrito --> 
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center text-uppercase">
+                    <h5>Precios de nuestros</h5>
+                    <h2>PRODUCTOS </h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Elementos generados a partir del JSON -->
+                <main id="items" class="col-sm-8 row mb-4"></main>
+                <!-- Carrito -->
+                <aside class="col-sm-4">
+                    <h2>Carrito</h2>
+                    <!-- Elementos del carrito -->
+                    <ul id="carrito" class="list-group"></ul>
+                    <hr>
+                    <!-- Precio total -->
+                    <p class="text-right">Total: $<span id="total">00.0</span>;</p>
+                    <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                </aside>
+            </div>
+        </div>
+    <!-- /Carrito -->
+    */
+
 window.onload = function () {
     // Variables
     let baseDeDatos = [

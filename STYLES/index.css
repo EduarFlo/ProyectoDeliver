@@ -18,6 +18,8 @@ ul, li {
   list-style: none;
 }
 
+q:before { content: close-quote; }
+
 nav.navbar {
   background-color: #FFD275;
 }
