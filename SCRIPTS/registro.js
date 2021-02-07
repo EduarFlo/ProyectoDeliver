@@ -6,7 +6,7 @@ window.onload = function () {
         //Primera vez guarda los usuarios en localStorage
         console.log("Guardando registros de usuarios");
 
-        let arreglo = {
+        /*let arreglo = {
             "users": [
                 {
                     "email": "qwerty@gmail.com",
@@ -21,10 +21,20 @@ window.onload = function () {
                     "address": "31 Minutos"
                 }
             ]
+        }*/
+
+        fetch('/SCRiPTS/usuarios.json')
+        .then(response => response.json())
+        .then(data => {
+            guardar(data);
+
+        });
+
+        function guardar(obj) {
+            localStorage.setItem('users', JSON.stringify(obj));
         }
 
-        localStorage.setItem('users', JSON.stringify(arreglo));
-
+        //localStorage.setItem('users', JSON.stringify(arreglo));
     }
 }
 
@@ -45,7 +55,7 @@ function validacionRegistro() {
         if (!(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(pass))) {
 
             document.getElementById("alertPass").removeAttribute("hidden");
-            return false;
+            return false; 
 
         }
 
@@ -102,15 +112,15 @@ function inicioSesion() {
         console.log(registro.users[i].email + " + " + registro.users[i].password);
 
         if (email_l == registro.users[i].email && pass_l == registro.users[i].password) {
-            success = true;
             alert("Bienvenido " + registro.users[i].username);
             console.log("Inicio de sesión exitoso");
+            success = true;
+            
         }
 
     }
 
     if (success) {
-
         return true;
     } else {
         document.getElementById("alert-log").removeAttribute("hidden");

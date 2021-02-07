@@ -5,7 +5,7 @@ window.onload = function () {
         //Primera vez guarda los usuarios en localStorage
         console.log("Guardando registros de usuarios");
 
-        let arreglo = {
+        /*let arreglo = {
             "bussines": [
                 {
                     "email": "star@bucks.com",
@@ -19,9 +19,20 @@ window.onload = function () {
 
                 }
             ]
+        }*/
+        
+        fetch('/SCRiPTS/negocios.json')
+        .then(response => response.json())
+        .then(data => {
+            guardar(data);
+
+        });
+
+        function guardar(obj) {
+            localStorage.setItem('bussines', JSON.stringify(obj));
         }
 
-        localStorage.setItem('bussines', JSON.stringify(arreglo));
+        //localStorage.setItem('bussines', JSON.stringify(arreglo));
 
     }
 }
